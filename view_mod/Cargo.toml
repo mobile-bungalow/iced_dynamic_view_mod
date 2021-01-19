@@ -1,0 +1,13 @@
+[package]
+name = "view_mod"
+version = "0.1.0"
+authors = ["mobile-bungalow <pwmay@ucsc.edu>"]
+edition = "2018"
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+dymod = "*"
+common = { path = "../common" }
+iced = "*"
