@@ -13,8 +13,9 @@ which might include tungstenite or plotters, or libraries that make heavy use of
 
 ## Does it really improve iteration time?
 No, not in most cases, but it really could given a few minor changes.
-1. with the addition of a dynamic backend to iced we could pass a `box<dyn Renderer>` to the dylib and not have to
-relink wgpu, gfx, lyon, etc. every time we rebuild the dylib.
+1. ~~with the addition of a dynamic backend to iced we could pass a `box<dyn Renderer>` to the dylib and not have to
+relink wgpu, gfx, lyon, etc. every time we rebuild the dylib. The renderer trait must be implemented by a sized type. this idea for speeding up
+dynamically linked builds is out the window.
 2. Iced is lazy in it's calls to view, so refreshing requires the view to be updated, writing a subscriber that watches file events
 and calls `dymod::reload` would also be ideal.
 3. this is actually a lot of hassle.
