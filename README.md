@@ -20,4 +20,4 @@ and calls `dymod::reload` would also be ideal.
 3. this is actually a lot of hassle.
 
 ## Goals
-ideally a dynamic backen to iced would build in less that 2 seconds allowing for really HTML equivalent iteration speeds.
+ideally a dynamic backend to iced would build in less that 2 seconds allowing for really HTML equivalent iteration speeds.
